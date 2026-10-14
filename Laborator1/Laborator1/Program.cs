@@ -13,7 +13,7 @@ namespace Laborator1
             n = long.Parse(Console.ReadLine());
 
 
-            string result = ConvertTo(n, 16);
+            string result = ConvertTo(n, 2);
 
             Console.WriteLine(result);
             
@@ -22,6 +22,7 @@ namespace Laborator1
         private static string ConvertTo(long n, int b)
         {
             Stack<long> st = new Stack<long>();
+            
             while (n > 0)
             {
                 st.Push(n % b);
@@ -34,13 +35,14 @@ namespace Laborator1
             {
                 long v = st.Pop();
                 if (v <= 9)
-                    sb.Append(v.ToString());
+                    sb.Append(v.ToString()); 
                 else
                     sb.Append((char)('A' + (v - 10)));
             }
+            
             return sb.ToString();
 
-
+            
         }
     }
 }
