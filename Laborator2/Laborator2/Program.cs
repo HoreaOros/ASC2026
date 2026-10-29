@@ -14,7 +14,6 @@ namespace Laborator2
             int baza = 16;
 
             Console.WriteLine(ConvertFrom(numar, baza));
-
         }
 
         private static int ConvertFrom(string numar, int baza)
