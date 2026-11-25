@@ -1,29 +1,37 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-
+using VendingMachine_01.States;
 namespace VendingMachine_01
 {
     internal class VendingMachine
     {
+        public static A A;
+        public static B B;
+        public static C C;
+        public static D D;
         State state;
         public VendingMachine()
         {
-            state = new A(this);
+            A = new A(this);
+            B = new B(this);
+            C = new C(this);
+            D = new D(this);
+            state = A;
         }
         public void SetState(State state)
         {
             this.state = state;
         }
-        public void N()
+        public void InsertNickle()
         {
             state.Nickle();
         }
-        public void D()
+        public void InsertDime()
         {
             state.Dime();
         }
-        public void Q()
+        public void InsertQuarter()
         {
             state.Quarter();
         }

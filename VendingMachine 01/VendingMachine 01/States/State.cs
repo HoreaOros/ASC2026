@@ -1,4 +1,4 @@
-﻿namespace VendingMachine_01
+﻿namespace VendingMachine_01.States
 {
     internal abstract class State
     {

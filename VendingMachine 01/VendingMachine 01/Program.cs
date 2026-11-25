@@ -17,22 +17,22 @@ while (!done)
     Console.Write("Your choice: ");
 
     int choice = Convert.ToInt32(Console.ReadLine());
-
+    Console.WriteLine();
     switch (choice)
     {
         case 1:
             Console.WriteLine("You inserted a nickle.");
-            vendingMachine.N();
+            vendingMachine.InsertNickle();
             break;
 
         case 2:
             Console.WriteLine("You inserted a dime.");
-            vendingMachine.D();
+            vendingMachine.InsertDime();
             break;
 
         case 3:
             Console.WriteLine("You inserted a quarter.");
-            vendingMachine.Q();
+            vendingMachine.InsertQuarter();
             break;
         case 4:
             Console.WriteLine("Thank you for using the Vending Machine. Goodbye!");
@@ -42,4 +42,5 @@ while (!done)
             Console.WriteLine("Invalid coin! Try again.");
             continue;
     }
+    Console.WriteLine();
 }

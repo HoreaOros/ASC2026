@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿
 
-namespace VendingMachine_01
+namespace VendingMachine_01.States
 {
     internal class B: State
     {
@@ -12,12 +10,12 @@ namespace VendingMachine_01
         public override void Nickle()
         {
             Console.WriteLine("Balance: 10 cents");
-            vendingMachine.SetState(new C(vendingMachine));
+            vendingMachine.SetState(VendingMachine.C);
         }
         public override void Dime()
         {
             Console.WriteLine("Balance: 15 cents");
-            vendingMachine.SetState(new D(vendingMachine));
+            vendingMachine.SetState(VendingMachine.D);
         }
         public override void Quarter()
         {
